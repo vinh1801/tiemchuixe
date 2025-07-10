@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thống kê Doanh thu"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#222"
+        android:layout_marginBottom="24dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupPeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        <RadioButton
+            android:id="@+id/radioButtonDaily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày"
+            android:buttonTint="@color/teal_200"/>
+        <RadioButton
+            android:id="@+id/radioButtonMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tháng"
+            android:buttonTint="@color/teal_200"
+            android:layout_marginStart="24dp"/>
+        <RadioButton
+            android:id="@+id/radioButtonYearly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Năm"
+            android:buttonTint="@color/teal_200"
+            android:layout_marginStart="24dp"/>
+    </RadioGroup>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSelectDate"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn ngày/tháng/năm"
+        app:cornerRadius="24dp"
+        app:iconGravity="textStart"
+        app:backgroundTint="@color/teal_200"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:elevation="6dp"
+        android:layout_marginBottom="16dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCompletedTickets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:layout_marginBottom="16dp"/>
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Không có dữ liệu"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="#888"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewTotalRevenue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng doanh thu: 0 VNĐ"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:textColor="#E57373"
+        android:layout_marginBottom="24dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        android:icon="@android:drawable/ic_media_previous"
+        app:iconPadding="12dp"
+        app:cornerRadius="24dp"
+        app:iconGravity="textStart"
+        app:strokeColor="@color/teal_200"
+        app:strokeWidth="2dp"
+        android:textColor="@color/teal_200"
+        android:elevation="0dp"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout> 
